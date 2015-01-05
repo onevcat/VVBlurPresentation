@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onevcat" translatesAutoresizingMaskIntoConstraints="NO" id="3mX-ao-kDn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3mX-ao-kDn" secondAttribute="height" multiplier="1:1" id="NJZ-d1-vsW"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBb-Ky-yxi">
+                                <rect key="frame" x="0.0" y="512" width="600" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jix-v4-bMh">
+                                        <rect key="frame" x="412" y="22" width="180" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="JRQ-ZU-gRf"/>
+                                            <constraint firstAttribute="width" constant="180" id="mFQ-66-Y3c"/>
+                                        </constraints>
+                                        <state key="normal" title="Present Dark">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7FZ-JK-TEm" kind="presentation" identifier="showDark" id="4BW-Fb-jFx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxg-nR-J1L">
+                                        <rect key="frame" x="8" y="22" width="180" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="180" id="4Mu-UG-4dA"/>
+                                            <constraint firstAttribute="height" constant="44" id="73u-qx-3Ux"/>
+                                        </constraints>
+                                        <state key="normal" title="Present Light">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7FZ-JK-TEm" kind="presentation" identifier="showLight" id="1C1-IB-HWe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="Jix-v4-bMh" secondAttribute="centerY" id="4mT-2i-7uH"/>
+                                    <constraint firstItem="Gxg-nR-J1L" firstAttribute="leading" secondItem="oBb-Ky-yxi" secondAttribute="leading" constant="8" id="9vM-pa-eS2"/>
+                                    <constraint firstAttribute="centerY" secondItem="Gxg-nR-J1L" secondAttribute="centerY" id="XPz-23-mPJ"/>
+                                    <constraint firstAttribute="height" constant="88" id="g9g-es-CdH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jix-v4-bMh" secondAttribute="trailing" constant="8" id="oUF-lI-8Rk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oBb-Ky-yxi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="79S-sL-IPX"/>
+                            <constraint firstAttribute="centerY" secondItem="3mX-ao-kDn" secondAttribute="centerY" id="AAv-iw-h7C"/>
+                            <constraint firstAttribute="width" secondItem="3mX-ao-kDn" secondAttribute="width" id="GBh-Fp-xZ8"/>
+                            <constraint firstAttribute="trailing" secondItem="oBb-Ky-yxi" secondAttribute="trailing" id="Uuc-uy-Bj7"/>
+                            <constraint firstAttribute="centerX" secondItem="3mX-ao-kDn" secondAttribute="centerX" id="eF1-bR-TPA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oBb-Ky-yxi" secondAttribute="bottom" id="pQM-ca-BQb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="453"/>
+        </scene>
+        <!--Presented View Controller-->
+        <scene sceneID="QQ6-Q3-euu">
+            <objects>
+                <viewController id="7FZ-JK-TEm" customClass="PresentedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AWE-b3-rpU"/>
+                        <viewControllerLayoutGuide type="bottom" id="5vO-Eu-ofn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LS9-PK-gzR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwy-tg-uAE">
+                                <rect key="frame" x="220" y="220" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="0cM-iw-KDr"/>
+                                    <constraint firstAttribute="height" constant="160" id="Vle-8U-VhT"/>
+                                </constraints>
+                                <state key="normal" image="Accept">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissClicked:" destination="7FZ-JK-TEm" eventType="touchUpInside" id="kGu-Yf-68i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="nwy-tg-uAE" secondAttribute="centerY" id="Dli-aN-wsD"/>
+                            <constraint firstAttribute="centerX" secondItem="nwy-tg-uAE" secondAttribute="centerX" id="nmV-2v-4KO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMQ-6N-TIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="453"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Accept" width="160" height="160"/>
+        <image name="onevcat" width="384" height="383"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4BW-Fb-jFx"/>
+    </inferredMetricsTieBreakers>
+</document>
