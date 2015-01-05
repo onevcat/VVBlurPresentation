@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    `VVBlurPresentation` will handle other things for you.
                    DESC
 
-  s.homepage     = "http://EXAMPLE/VVBlurPresentation"
+  s.homepage     = "https://github.com/onevcat/VVBlurPresentation"
   s.screenshots  = "https://raw.github.com/onevcat/VVBlurPresentation/master/Gif/screenshot.gif"
 
   s.license      = "MIT"
