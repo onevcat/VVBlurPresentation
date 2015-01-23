@@ -30,26 +30,29 @@ You can use it with both code and storyboard.
 
 1. Create or change your presented view controller as a subclass of `VVBlurViewController`.
 
-        //PresentedViewController.h
-        #import "VVBlurViewController.h"
-        @interface PresentedViewController : VVBlurViewController
-
-        @end
-
-        //PresentedViewController.m
-        //...
+    ```objc
+    //PresentedViewController.h
+    #import "VVBlurViewController.h"
+    @interface PresentedViewController : VVBlurViewController
+    
+    @end
+    
+    //PresentedViewController.m
+    //...
+    ```
 
 2. Create an instance of `PresentedViewController` and present it from your presenting view controller.
 
-        //PresentingViewController.m
-        
-        #import "PresentedViewController.h"
-
-        //
-        - (void)present {
-            PresentedViewController *pvc = [PresentedViewController new];
-            [self presentViewController:pvc animated:YES completion:nil];
-        }
+    ```objc
+    //PresentingViewController.m
+    
+    #import "PresentedViewController.h"
+    
+    - (void)present {
+        PresentedViewController *pvc = [PresentedViewController new];
+        [self presentViewController:pvc animated:YES completion:nil];
+    }
+    ```
 
 If you are using storyboard, change the class of your view controller to the subclass of `VVBlurViewController` (`PresentedViewController` here). Then use a "Present Modally" segue to present the new view controller.
 
