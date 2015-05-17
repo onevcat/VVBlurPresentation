@@ -73,6 +73,14 @@
     }
 }
 
+-(void)dismissalTransitionDidEnd:(BOOL)completed {
+    if (completed) {
+        if (self.vv_presentationDelegate && [self.vv_presentationDelegate respondsToSelector:@selector(presentationControllerDidDismissed:)]) {
+            [self.vv_presentationDelegate presentationControllerDidDismissed:self];
+        }
+    }
+}
+
 - (void)containerViewWillLayoutSubviews {
     self.effectContainerView.frame = self.containerView.bounds;
     self.dimmingView.frame = self.containerView.bounds;

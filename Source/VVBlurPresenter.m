@@ -25,7 +25,7 @@
 #import "VVBlurPresentationController.h"
 #import "VVBlurTransitioning.h"
 
-@interface VVBlurPresenter ()
+@interface VVBlurPresenter () <VVBlurPresentationControllerDelegate>
 @property (nonatomic, strong) VVBlurPresentationController *animationController;
 @end
 
@@ -44,9 +44,9 @@
                                                                sourceViewController:(UIViewController *)source {
     if (!self.animationController) {
         self.animationController = [[VVBlurPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting style:self.blurStyle];
+        self.animationController.vv_presentationDelegate = self;
     }
     return self.animationController;
-    
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
@@ -72,4 +72,9 @@
         self.animationController.blurStyle = blurStyle;
     }
 }
+
+-(void)presentationControllerDidDismissed:(VVBlurPresentationController *)controller {
+    self.animationController = nil;
+}
+
 @end

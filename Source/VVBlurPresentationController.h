@@ -23,9 +23,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class VVBlurPresentationController;
+
+@protocol VVBlurPresentationControllerDelegate <NSObject>
+
+- (void)presentationControllerDidDismissed:(VVBlurPresentationController *)controller;
+
+@end
+
 @interface VVBlurPresentationController : UIPresentationController
 
 @property (nonatomic, assign) UIBlurEffectStyle blurStyle;
+@property (nonatomic, weak) id<VVBlurPresentationControllerDelegate> vv_presentationDelegate;
 
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController style:(UIBlurEffectStyle)style;
 
